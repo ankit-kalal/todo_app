@@ -1,0 +1,97 @@
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="exampleModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <div class="row justify-content-center">
+          <form id="todo-form" method="POST">
+            {% csrf_token %}
+            <div class="col-12">
+              <input
+                type="text"
+                name="title"
+                class="form-control"
+                id="new-task"
+                required
+              />
+
+              <label for="task_priority">Set a Task Priority</label>
+              <select name="task_priority" id="task_priority">
+                <option value="0">Low</option>
+                <option value="1">Medium</option>
+                <option value="2">High</option>
+              </select>
+
+              <button type="submit" class="btn btn-secondary">Add</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="exampleModal2"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <div class="row justify-content-center">
+          <form id="todo-form" method="POST">
+            {% csrf_token %}
+            <div class="col-12">
+              <input
+                type="text"
+                name="title"
+                class="form-control"
+                id="update_task_title"
+                required
+              />
+
+              <label for="update_task_priority">Set a Task Priority</label>
+              <select name="task_priority" id="update_task_priority">
+                <option value="0">Low</option>
+                <option value="1">Medium</option>
+                <option value="2">High</option>
+              </select>
+
+              <button type="button" id="update_btn"  class="btn btn-secondary">update</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

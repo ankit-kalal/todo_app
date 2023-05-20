@@ -1,0 +1,65 @@
+{% extends 'todo_frontend/base.html' %} {% load static %} {% block body %}
+
+<div class="container text-center">
+    <div class="header">
+      <h2>TODO LIST</h2>
+
+      <div class="row justify-content-center">
+        <form id="" method="">
+          {% csrf_token %}
+          <div class="col-12">
+            <input type="text" name="live-search" class="live-search" id="live-search"/>
+          </div>
+        </form>
+      </div>
+    </div>
+
+  <div class="row center">
+    <div class="col">
+      <h3>Todo</h3>
+      <ul id="incomplete-tasks">
+        <li>
+          <input type="checkbox" />
+          <label>Pay Bills</label>
+
+          <button class="edit">Edit</button>
+          <button class="delete">Delete</button>
+        </li>
+        <li>
+          <input class="complete" type="checkbox" /><label>Go Shopping</label
+          ><input type="text" value="Go Shopping" /><button class="edit">
+            Edit</button
+          ><button class="delete">Delete</button>
+        </li>
+      </ul>
+    </div>
+    <div class="col">
+      <h3>Completed</h3>
+      <ul id="completed-tasks">
+        <li>
+          <input type="checkbox" checked /><label>See the Doctor</label
+          ><input type="text" /><button class="edit">Edit</button
+          ><button class="delete">Delete</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <button
+    type="button"
+    class="add-btn btn btn-secondary center"
+    data-bs-toggle="modal"
+    data-bs-target="#exampleModal"
+  >
+    <i class="bi-plus"></i>
+  </button>
+
+  <button
+    type="button"
+    class="updateButton"
+    data-bs-toggle="modal"
+    data-bs-target="#exampleModal2"
+  ></button>
+</div>
+
+{% include 'todo_frontend/model.html' %} {% endblock body %}
